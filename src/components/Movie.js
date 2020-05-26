@@ -4,6 +4,7 @@ import Proptypes from 'prop-types';
 export class Movie extends Component {
     //Indicamos todas las props que utilizará este componente
     static propTypes = {
+        id:Proptypes.string,
         title: Proptypes.string,
         year: Proptypes.string,
         poster: Proptypes.string
@@ -11,9 +12,9 @@ export class Movie extends Component {
     //Renderizamos para mostrar la info
     render() {
         //Hacemos un destructuring de los props
-        const { title, year, poster } = this.props
+        const { id, title, year, poster } = this.props
         return (
-            <div className="card">
+            <a href={`?id=${id}`} className="card">
                 <div className="card-image">
                     <figure className="image">
                         <img src={poster} alt={title} />
@@ -27,7 +28,7 @@ export class Movie extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
         )
     }
 }
