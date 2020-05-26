@@ -17,7 +17,7 @@ export class SearchForm extends Component {
             .then( res => res.json())//transformamos la respuesta a JSON
             .then(results => {
                 //se extrae la propiedad Search y Total results del JSON
-                const { Search, totalResults} = results;
+                const { Search= [], totalResults='0'} = results;//Se le asigna un valor por defecto
                 console.log(Search, totalResults)
                 //Pasamos Search el metodo onResults para enviarle los resultados al App.js
                 this.props.onResults(Search)
