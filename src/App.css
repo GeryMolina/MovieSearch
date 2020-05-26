@@ -18,4 +18,21 @@
 .MoviesList-item{
   margin-bottom: 5vh;
   width: 30%;
+  padding: 5vh;
+}
+
+.Movie-details section{
+  display: flex;
+  justify-content: flex-start;
+  padding:2vh 0;
+}
+
+.Movie-info {
+  display: flex;
+  width: 80%;
+  margin:auto
+}
+.Movie-info section{
+  flex-direction: column;
+  width: 60%;
 }

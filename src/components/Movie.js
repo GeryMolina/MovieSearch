@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Proptypes from 'prop-types';
 
+import { Link } from 'react-router-dom';
+
 export class Movie extends Component {
     //Indicamos todas las props que utilizará este componente
     static propTypes = {
@@ -14,7 +16,7 @@ export class Movie extends Component {
         //Hacemos un destructuring de los props
         const { id, title, year, poster } = this.props
         return (
-            <a href={`?id=${id}`} className="card">
+            <Link to={`/details/${id}`} className="card">
                 <div className="card-image">
                     <figure className="image">
                         <img src={poster} alt={title} />
@@ -28,7 +30,7 @@ export class Movie extends Component {
                         </div>
                     </div>
                 </div>
-            </a>
+            </Link>
         )
     }
 }

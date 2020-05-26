@@ -13,7 +13,7 @@ export class MovieList extends Component {
                 {
                     movies.map(movie => {
                         return (
-                            <div key={movie.imdbID} className='MoviesList-item'>
+                            <div key={movie.imdbID + 1} className='MoviesList-item'>
                                 <Movie
                                     id={movie.imdbID}
                                     title={movie.Title}
